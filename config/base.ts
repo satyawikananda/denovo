@@ -1,5 +1,5 @@
 export const APP_ID: string = 'C7UMRSMFRZ46D9GW9IK7';
-export const APP_VERSION: string = '3.2.0';
+export const APP_VERSION: string = '3.16.0';
 export const OS_NAME: string = 'Android';
 export const OS_VERSION: string = '8.1.0';
 export const MAC_ADDRESS: string = 'd8:8e:35:4d:bd:88';
