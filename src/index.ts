@@ -43,7 +43,7 @@ export class Denovo {
         return ovoPost('v2.0/api/auth/customer/login2FA/verify', data, this.headers)
     }
 
-    loginSecurity(securityCode: number, updateAccessToken: string){
+    loginSecurity(securityCode: number | string, updateAccessToken: string){
         const data:DataLoginSecurity = {
             'deviceUnixTime': Math.floor(new Date().valueOf() / 1000),
             'securityCode': securityCode,
