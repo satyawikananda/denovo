@@ -1,4 +1,4 @@
-import {Denovo} from "../mod.ts"
+import {Denovo} from "https://raw.githubusercontent.com/satyawikananda/denovo/master/mod.ts"
 
 let denovo = new Denovo()
 
