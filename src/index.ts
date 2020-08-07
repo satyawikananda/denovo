@@ -1,17 +1,17 @@
-import { APP_ID, APP_VERSION, OS_NAME, OS_VERSION, MAC_ADDRESS, TRANSFER_OVO, TRANSFER_BANK } from "../config/base.ts"
+import { APP_ID, APP_VERSION, OS_NAME, OS_VERSION, MAC_ADDRESS } from "../config/base.ts"
 import { ovoPost, ovoGet } from "./utils/request.ts"
 import { v4 } from "https://deno.land/std/uuid/mod.ts";
-import { DataLoginSecurity,DataLogin2FA, DataHeaders, DataLogin2FAVerify } from "./interface/interface.ts"
-export default class Denovo {
+import { DataLoginSecurity, DataLogin2FA, DataHeaders, DataLogin2FAVerify } from "./interface/interface.ts"
+export class Denovo {
     public authToken?: string
     public headers: DataHeaders
     constructor(authToken?: string){
-        this.authToken = authToken
         this.headers = {
             'Content-Type': 'application/json',
             'app-id': APP_ID,
             'App-Version': APP_VERSION,
             'OS': OS_NAME,
+            'Authorization': authToken
         }
     }
 
@@ -59,10 +59,28 @@ export default class Denovo {
     }
 
     getUnreadHistory() {
-        return ovoGet('v1.0/notification/status/all', '', this._aditionalHeader)
+        return ovoGet('v1.0/notification/status/all', '', this._aditionalHeader())
             .then(data => {
                 return data
             })
+    }
+
+    getBudget(){
+        return ovoGet('v1.0/budget/detail', '', this._aditionalHeader())
+            .then(data => {
+                return data
+            })
+    }
+
+    getRefBank(){
+        return ovoGet('v1.0/reference/master/ref_bank', '', this._aditionalHeader())
+         .then(data => {
+            return data
+         })
+    }
+
+    getAllNotif(){
+        return ovoGet('v1.0/notification/status/all', '', this._aditionalHeader())
     }
 
     _aditionalHeader() {

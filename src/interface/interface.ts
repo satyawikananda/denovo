@@ -3,6 +3,7 @@ export interface DataHeaders {
     'app-id': string;
     'App-Version': string;
     'OS': string;
+    'Authorization': string | undefined;
 }
 
 export interface DataLogin2FA {
@@ -12,7 +13,7 @@ export interface DataLogin2FA {
 
 export interface DataLoginSecurity {
     'deviceUnixTime': any;
-    'securityCode': number;
+    'securityCode': number | string;
     'updateAccessToken': string;
     'message': string
 }
@@ -25,6 +26,6 @@ export interface DataLogin2FAVerify {
     'osName': string;
     'osVersion': string;
     'refId': string;
-    'verificationCode': string;
+    'verificationCode': string | number;
     'pushNotificationId': string
 }
