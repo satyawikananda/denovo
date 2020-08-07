@@ -83,6 +83,10 @@ export class Denovo {
         return ovoGet('v1.0/notification/status/all', '', this._aditionalHeader())
     }
 
+    ovoLogout() {
+        return ovoGet('v1.0/api/auth/customer/logout', '', this._aditionalHeader())
+    }
+
     _aditionalHeader() {
         return {
           'Authorization': this.authToken,
