@@ -17,7 +17,7 @@ This is an Un-official Ovo API wrapper for Deno got inspired from [ovoid-nodejs]
 * Import Denovo class from mod.ts
 
 ```js
-import {Denovo} from "../mod.ts"
+import {Denovo} from "https://raw.githubusercontent.com/satyawikananda/denovo/master/mod.ts"
 
 let denovo = new Denovo()
 ```
