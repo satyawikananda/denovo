@@ -5,7 +5,7 @@
 </div>
 
 <div align="center">
-    <img src="./screenshot/thumbnail.png" align="center" width="600px">
+    <img src="https://raw.githubusercontent.com/satyawikananda/denovo/master/screenshot/thumbnail.png" align="center" width="600px">
 </div>
 
 # Description
