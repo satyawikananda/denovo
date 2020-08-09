@@ -47,6 +47,10 @@ getRefBank.then((data) => console.log(data))
 let getAllNotif = denovo.getAllNotif()
 getAllNotif.then((data) => console.log(data))
 
+// Get data wallet transaction
+let getWalletTrans = denovo.getWalletTrans(1, 10)
+getWalletTrans.then((data) => console.log(data))
+
 // Logout from ovo
 let logout = denovo.ovoLogout()
 logout.then((data) => console.log(data))

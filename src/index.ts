@@ -83,6 +83,10 @@ export class Denovo {
         return ovoGet('v1.0/notification/status/all', '', this._aditionalHeader())
     }
 
+    getWalletTrans(page: string | number, limit: number = 10){
+        return ovoGet('wallet/v2/transaction', {page, limit, productType: '001'}, this._aditionalHeader())
+    }
+
     ovoLogout() {
         return ovoGet('v1.0/api/auth/customer/logout', '', this._aditionalHeader())
     }
