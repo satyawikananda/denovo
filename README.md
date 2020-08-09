@@ -77,6 +77,13 @@ let getUnreadHistory = denovo.getUnreadHistory()
 getUnreadHistory.then((data) => console.log(data))
 ```
 
+* To get data wallet transaction, you can use getWalletTrans function
+
+```js
+let getWalletTrans = denovo.getWalletTrans(1, 10)
+getWalletTrans.then((data) => console.log(data))
+```
+
 * To logout from your ovo account, you can use logout function
 
 ```js
@@ -100,6 +107,7 @@ deno run --allow-net ./example/index.ts
 | `getRefBank`  | ✔  |
 | `getAllNotification`  | ✔  |
 | `getUnreadHistory`  | ✔  |
+| `getWalletTransaction`  | ✔  |
 | `logout`  | ✔  |
 | `generateTrxId`  | ✖  |
 | `transferOvo`  | ✖  |
